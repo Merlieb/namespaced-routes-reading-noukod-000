@@ -12,4 +12,8 @@ get '/admin/authors/new', to: 'authors#new'
 get '/admin/authors/delete', to: 'authors#delete'
 get '/admin/authors/create', to: 'authors#create'
 get '/admin/comments/moderate', to: 'comments#moderate'
+
+scope '/admin' do
+  resources :stats, only: [:index]
+end
 end
